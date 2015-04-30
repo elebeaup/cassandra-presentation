@@ -2,10 +2,8 @@
   "generator-reveal": {
     "presentationTitle": "Cassandra",
     "packageVersion": "0.0.1",
-    "revealTheme": "beige",
+    "revealTheme": "solarized",
     "useSass": false,
-    "deployToGithubPages": true,
-    "githubUsername": "elebeaup",
-    "githubRepository": "https://github.com/elebeaup/cassandra-presentation"
+    "deployToGithubPages": false
   }
 }
