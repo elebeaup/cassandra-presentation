@@ -3,6 +3,18 @@
   box-shadow: 0 0 0 0;
 }
 
+.reveal section img.image-right {
+  border: 0;
+  box-shadow: 0 0 0 0;
+  float: right;
+}
+
+.reveal section img.image-left {
+  border: 0;
+  box-shadow: 0 0 0 0;
+  float: left;
+}
+
 .positive {
   color: #E4D26C;
   text-shadow: 0 5px 0 #080;
