@@ -2,7 +2,7 @@
   "generator-reveal": {
     "presentationTitle": "Cassandra",
     "packageVersion": "0.0.1",
-    "revealTheme": "solarized",
+    "revealTheme": "sky",
     "useSass": false,
     "deployToGithubPages": false
   }
