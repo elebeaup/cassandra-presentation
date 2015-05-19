@@ -6,7 +6,7 @@
     "history.html",
     "usages.html",
     "illustration_cluster.html",
-    "cql_examples.html",
     "illustration_replication.html",
+    "cql_examples.html",
     "qa.html"
 ]
