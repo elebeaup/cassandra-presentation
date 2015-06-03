@@ -10,3 +10,16 @@
 <p>- SimpleStrategy : Pour les data centers esseulés</p>
 <p>- NetworkTopologyStrategy</p>
 </section>
+
+<section>
+<h2>Niveaux de consistance</h2>
+<p>LOCAL_QUORUM : requiert un quorum des noeuds dans le même DC que le coordinateur :</p>
+<p>- besoin d'un DC local disponible avec un quorum des réplications</p>
+<p>- Consistance locale</p>
+<p>- Les écritures sont toujours répliquées dans tous les DC</p>
+
+<p>EACH_QUORUM : requiert un quorum des noeuds dans chaque DC :</p>
+<p>- Fonctionne uniquement si tous les DC sont disponibles avec un quorum des réplications</p>
+<p>- Consistance globale sur tous les DC</p>
+<p>- ex : un DC backup qui doit être consistant avec un autre DC</p>
+</section>
