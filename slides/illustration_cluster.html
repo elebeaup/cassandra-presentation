@@ -4,14 +4,17 @@
     <img src="img/illustration_cluster.png" alt="Cluster illustration" class="image-right">
     <p align="left">Un noeud est responsable de la donnée dans la région du cercle entre lui même (inclus) et son prédécesseur (exclus)</p>
     <p align="left">Le dernier noeud est le prédécesseur du premier (permettant de former le fameux cercle à droite)</p>
-    <p align="left">Par exemple : le noeud avec le token 25 sera responsable de la donnée qui possède une partition key hash à 12</p>
 </section>
 <section>
     <h2>Consistent Hashing</h2>
     <ul>
         <li>Applique une fonction de hashage de la clé (Partition Key)</li>
         <li>Détermine le noeud à partir du résultat du hashage</li>
+        <li>S'appuie par défaut sur MurmurHash (Plage de -2<sup>63</sup> à +2<sup>63</sup>-1)</li> 
     </ul>
+    <p>&nbsp;</p>
+    <img src="img/illustration_cluster.png" alt="Cluster illustration" class="image-right">
+    <p align="left">Par exemple : le noeud avec le token 25 sera responsable de la donnée qui possède une partition key hash à 12</p>
 </section>
 <section>
     <h2>Exemple de réplication avec RF=3 sur 6 noeuds</h2>

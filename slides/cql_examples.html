@@ -11,9 +11,20 @@
     <h2>Un petit exemple...</h2>
     <p>&nbsp;</p>
     <pre><code>
-CREATE TABLE t (k int PRIMARY KEY, other text)
-CREATE TRIGGER myTrigger ON myTable USING 'org.apache.cassandra.triggers.InvertedIndex';
-UPDATE UserActions SET total = total + 2 WHERE user = B70DE1D0-9908-4AE3-BE34-5573E5B09F14 AND action = 'click';
+CREATE TABLE data (
+  sensor_id int,
+  collected_at timestamp,
+  volts float,
+  PRIMARY KEY (sensor_id, collected_at)
+);
     </code></pre>
     <p>&nbsp;</p>
 </section>
+<section>
+    <h2>Un autre exemple...</h2>
+    <p>&nbsp;</p>
+    <pre><code>
+SELECT * from data where sensor_id = 'SENSOR1'
+    </code></pre>
+    <p>&nbsp;</p>
+</section
