@@ -1,4 +1,21 @@
-<img src="img/illustration_cluster.png" alt="Cluster illustration" class="image-right">
-<p align="left">Un noeud est responsable de la donnée dans la région du cercle entre lui même (inclus) et son prédécesseur (exclus)</p>
-<p align="left">Le dernier noeud est le prédécesseur du premier (permettant de former le fameux cercle à droite)</p>
-<p align="left">Par exemple : le noeud avec le token 25 sera responsable de la donnée qui possède une partition key hash à 12</p>
+<section>
+    <h2>Cluster et réplication</h2>
+    <p>&nbsp;</p>
+    <img src="img/illustration_cluster.png" alt="Cluster illustration" class="image-right">
+    <p align="left">Un noeud est responsable de la donnée dans la région du cercle entre lui même (inclus) et son prédécesseur (exclus)</p>
+    <p align="left">Le dernier noeud est le prédécesseur du premier (permettant de former le fameux cercle à droite)</p>
+    <p align="left">Par exemple : le noeud avec le token 25 sera responsable de la donnée qui possède une partition key hash à 12</p>
+</section>
+<section>
+    <h2>Exemple de réplication avec RF=3 sur 6 noeuds</h2>
+    <img src="img/illustration_replication.png" alt="Cluster illustration">
+    <p>Données répliquées aux noeuds 1, 2 et 3.</p>
+</section>
+<section>
+    <h2>Stratégies de réplications</h2>
+    <p>Détermine où les noeuds de réplications sont placés</p>
+    <ul>
+        <li>SimpleStrategy : Pour les data centers esseulés</li>
+        <li>NetworkTopologyStrategy</li>
+    </ul>
+</section>
