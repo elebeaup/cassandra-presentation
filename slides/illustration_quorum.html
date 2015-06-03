@@ -1,0 +1,16 @@
+<section>
+    <h2>Niveaux de consistance</h2>
+    <p>LOCAL_QUORUM : requiert un quorum des noeuds dans le même DC que le coordinateur :</p>
+    <ul>
+        <li>besoin d'un DC local disponible avec un quorum des réplications</li>
+        <li>Consistance locale</li>
+        <li>Les écritures sont toujours répliquées dans tous les DC</li>
+    </ul>
+        <p>&nbsp;</p>
+        <p>EACH_QUORUM : requiert un quorum des noeuds dans chaque DC :</p>
+    <ul>
+        <li>Fonctionne uniquement si tous les DC sont disponibles avec un quorum des réplications</li>
+        <li>Consistance globale sur tous les DC</li>
+        <li>ex : un DC backup qui doit être consistant avec un autre DC</li>
+    </ul>
+</section>
