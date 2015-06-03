@@ -7,6 +7,13 @@
     <p align="left">Par exemple : le noeud avec le token 25 sera responsable de la donnée qui possède une partition key hash à 12</p>
 </section>
 <section>
+    <h2>Consistent Hashing</h2>
+    <ul>
+        <li>Applique une fonction de hashage de la clé (Partition Key)</li>
+        <li>Détermine le noeud à partir du résultat du hashage</li>
+    </ul>
+</section>
+<section>
     <h2>Exemple de réplication avec RF=3 sur 6 noeuds</h2>
     <img src="img/illustration_replication.png" alt="Cluster illustration">
     <p>Données répliquées aux noeuds 1, 2 et 3.</p>
