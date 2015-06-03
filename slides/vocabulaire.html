@@ -24,7 +24,6 @@
             <li>Primary Key : Partition Key + (optionnel) Clustering Key</li>
             <li>Partition Key/Row Key: responsable de la distribution à travers les différents noeuds</li>
             <li>Clustering Key : responsable de la répartition/ordre des données dans la paritition
-            <li>TTL</li>
             <li>Composite Key : plusieurs colonnes au niveau de la clé. (Séparé par des : au niveau de la représentation physique)</li>
             <li>Skinny Rows : Primary Key contient seulement une Partition Key</li>
             <li>Wide Rows : Primary Key contient des colonnes (Clustering Key) en plus de la parition key</li>
@@ -46,4 +45,9 @@
 <section>
     <h3>Keyspace et Cluster</h3>
     <img src="img/cluster.png">
+</section>
+
+<section>
+    <h3>Valeur expirante</h3>
+    <img src="img/ttl.png">
 </section>
