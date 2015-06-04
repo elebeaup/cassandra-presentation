@@ -1,16 +1,37 @@
 <section>
+    <h2>Théorème CAP</h2>
+    <img class="raw" src="img/cap_theorem.png" width="70%" height="70%">
+    <ul>
+        <li><strong>Consistency</strong> : Tous les noeuds voient les dernières données à jour</li>
+        <li><strong>Availability</strong> : Les requêtes ne retournent pas d'erreur</li>
+        <li><strong>Partition Tolerance </strong> : Le système reste fonctionnel même en cas de panne</li>
+    </ul>
+</section>
+<section>
     <h2>Niveaux de consistance</h2>
-    <p>LOCAL_QUORUM : requiert un quorum des noeuds dans le même DC que le coordinateur :</p>
     <ul>
-        <li>besoin d'un DC local disponible avec un quorum des réplications</li>
-        <li>Consistance locale</li>
-        <li>Les écritures sont toujours répliquées dans tous les DC</li>
-    </ul>
+        <li>Pour les lectures/écritures, le client peut spécifier le niveau de consistence</li>
         <p>&nbsp;</p>
-        <p>EACH_QUORUM : requiert un quorum des noeuds dans chaque DC :</p>
-    <ul>
-        <li>Fonctionne uniquement si tous les DC sont disponibles avec un quorum des réplications</li>
-        <li>Consistance globale sur tous les DC</li>
-        <li>ex : un DC backup qui doit être consistant avec un autre DC</li>
+        <li>En lecture, configuration du nombre de noeud qui doivent répondre à une requête</li>
+        <p>&nbsp;</p>
+        <li>En écriture, configuration du nombre de noeud qui doivent accuser l'écriture de la donnée</li>
     </ul>
+</section>
+<section>
+    <h2>Différents niveaux de consistance</h2>
+    <ul>
+        <li>ONE</li>
+        <li>ALL</li>
+        <li>QUORUM</li>
+        <li>EACH_QUORUM</li>
+        <li>LOCAL_QUORUM</li>
+        <li>...</li>
+    </ul>
+     <aside class="notes">
+        <li>ONE : Donnée écrite/lue sur au moins un des noeuds répliqués</li>
+        <li>ALL : Donnée écrite/lue sur tous les noeuds répliqués</li>
+        <li>QUORUM : Donnée écrite/lue sur un quorum de replica quelque soit le datacenter</li> 
+        <li>EACH_QUORUM : Donnée écrite/lue sur un quorum de replica sur chaque datacenter</li>
+        <li>LOCAL_QUORUM : Donnée écrite/lue sur un quorum de replica sur le datacenter courant (où se trouve le coordinateur)</li>
+    </aside>
 </section>
