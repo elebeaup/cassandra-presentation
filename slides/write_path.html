@@ -1,0 +1,19 @@
+<section>
+    <h2>The write path</h2>
+    <ul>
+        <li>Log la donnée dans le commit log</li>
+        <li>Ecrit la donnée dans la memtable</li>
+        <li>Flush la data de la memtable</li>
+        <li>Stocke la donnée sur le disque dans dans SSTables</li>
+        <li>Compaction</li>
+    </ul>
+    <img src="img/write_path.png" width="60%" height="60%">
+    <aside class="notes">
+        <ul>
+            <li>Le commit log reçoit toutes les écritures faites sur un noeud Cassandra, ces écritures sont permanentes, elles survivent de manière permanente même après une panne de courant par exemple</li>
+            <li>Le memtable est un cache mémoire des données partitionnées dans lequel Cassandra recherche les clés, la memtable stocke les écrits jusqu'à atteindre une limite et est ensuite flushée.</li>
+            <li>Ce seuil est configurable, les données de la memtable sont alors mises en attente dans une file d'attente pour être flushées sur le disque. La taille de cette file est configurable, si elle est dépassée alors Cassandra bloque les écritures jusqu'au succès du prochain flush.</li>
+            <li>SStable = partition index + partition summary + bloom filter</li>
+        </ul>
+    </aside>
+</section>
