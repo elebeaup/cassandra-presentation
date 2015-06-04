@@ -1,0 +1,42 @@
+<section>
+    <h2>The write path</h2>
+    <ul>
+        <li>Log la donnée dans le commit log</li>
+        <li>Ecrit la donnée dans la memtable</li>
+        <li>Flush la data de la memtable</li>
+        <li>Stocke la donnée sur le disque dans dans SSTables</li>
+        <li>Compaction</li>
+    </ul>
+    <img src="img/write_path.png" width="60%" height="60%">
+    <aside class="notes">
+        <ul>
+            <li>Le commit log reçoit toutes les écritures faites sur un noeud Cassandra, ces écritures sont permanentes, elles survivent de manière permanente même après une panne de courant par exemple</li>
+            <li>Le memtable est un cache mémoire des données partitionnées dans lequel Cassandra recherche les clés, la memtable stocke les écrits jusqu'à atteindre une limite et est ensuite flushée.</li>
+            <li>Ce seuil est configurable, les données de la memtable sont alors mises en attente dans une file d'attente pour être flushées sur le disque. La taille de cette file est configurable, si elle est dépassée alors Cassandra bloque les écritures jusqu'au succès du prochain flush.</li>
+            <li>SStable = partition index + partition summary + bloom filter</li>
+        </ul>
+    </aside>
+</section>
+<section>
+<h2>Memtables et SSTables</h2>
+<p><strong>Les memtables sont organisées par partition key</p></strong>
+<ul>
+    <li>Il y a une memtable par table par noeud</li>
+    <li>Les updates sur les valeurs de colonnes dans la memtable écrasent les valeurs existantes</li>
+    <li>L'accès à ces données est très rapide puisqu'elles sont en mémoire</li>
+    <li>Les updates sont aussi mergées en mémoire pour une partition key donnée.</li>
+</ul>
+</section>
+<section>
+<p><strong>Les memtables sont toujours flushées vers les SSTables (Sorted String Tables) sur le disque</strong></p>
+<ul>
+    <li>Pour ne pas prendre trop de place en mémoire</li>
+    <li>Flushées en utilisant une lecture/écriture séquentielle pour plus de rapidité</li>
+    <li>Les SSTables sont immuables une fois écrites sur le disque</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Les updates sur une donnée déjà existante d'une SSTable vont dans une memtable, puis dans une SSTable différente</p></strong>
+<ul>
+    <li>Pour que la donnée pour une partition key donnée puisse être dans plusieurs endroits différents</li>
+</ul>
+</section>

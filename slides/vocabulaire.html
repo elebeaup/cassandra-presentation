@@ -1,0 +1,53 @@
+<section>
+    <h2>Un peu de vocabulaire...</h2>
+    <img class="raw" src="img/scrabble.jpg">
+</section>
+
+<section>
+    <h3>Version courte</h3>
+    <p>&nbsp;</p>
+    <ul>
+        <li>Une Map distribuée de (Sorted)Map</li>
+    </ul>
+</section>
+
+<section>
+    <h3>Column</h3>
+    <img src="img/column.png">
+</section>
+
+<section>
+    <h3>Row</h3>
+    <img src="img/row.png">
+    <aside class="notes">
+        <ul>
+            <li>Primary Key : Partition Key + (optionnel) Clustering Key</li>
+            <li>Partition Key/Row Key: responsable de la distribution à travers les différents noeuds</li>
+            <li>Clustering Key : responsable de la répartition/ordre des données dans la paritition</li>
+            <li>Composite Key : plusieurs colonnes au niveau de la clé. (Séparé par des : au niveau de la représentation physique)</li>
+            <li>Skinny Rows : Primary Key contient seulement une Partition Key</li>
+            <li>Wide Rows : Primary Key contient des colonnes (Clustering Key) en plus de la parition key</li>
+            <li>Une colonne peut être une valeur : Cas des timeseries par exemple</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h3>Exemple de Row...</h3>
+    <img src="img/row_example.png">
+</section>
+
+<section>
+    <h3>Column Family</h3>
+    <img src="img/column_family.png">
+</section>
+
+<section>
+    <h3>Keyspace et Cluster</h3>
+    <img src="img/cluster.png">
+</section>
+
+<section>
+    <h3>Valeur expirante</h3>
+    <img src="img/ttl.png">
+</section>

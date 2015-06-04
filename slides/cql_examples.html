@@ -1,0 +1,30 @@
+<section>
+    <h2>CQL, <span class="neutral">C</span>assandra <span class="neutral">Q</span>uery <span class="neutral">L</span>anguage</h2>
+    <p>&nbsp;</p>
+    <ul>
+        <li>Offre une perception semblable au SQL</li>
+        <li>Une représentation des données familières en colonnes-lignes</li>
+        <li>Beaucoup plus intuitif que l'interface basé sur Thrift</li>
+    </ul>
+</section>
+<section>
+    <h2>Un petit exemple...</h2>
+    <p>&nbsp;</p>
+    <pre><code>
+CREATE TABLE data (
+  sensor_id int,
+  collected_at timestamp,
+  volts float,
+  PRIMARY KEY (sensor_id, collected_at)
+);
+    </code></pre>
+    <p>&nbsp;</p>
+</section>
+<section>
+    <h2>Un autre exemple...</h2>
+    <p>&nbsp;</p>
+    <pre><code>
+SELECT * from data where sensor_id = 'SENSOR1'
+    </code></pre>
+    <p>&nbsp;</p>
+</section

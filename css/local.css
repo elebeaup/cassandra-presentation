@@ -1,6 +1,20 @@
+@import url(./fontello.css);
+
 .reveal section img.title-logo {
   border: 0;
   box-shadow: 0 0 0 0;
+}
+
+.reveal section img.image-right {
+  border: 0;
+  box-shadow: 0 0 0 0;
+  float: right;
+}
+
+.reveal section img.image-left {
+  border: 0;
+  box-shadow: 0 0 0 0;
+  float: left;
 }
 
 .positive {
@@ -10,7 +24,7 @@
 }
 
 .neutral {
-  color: #6C7EE4;
+  color: #0080FF;
   text-shadow: 0 5px 0 #080;
   text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
@@ -68,4 +82,11 @@ dl.timeline dd::after {
 .reveal section img.raw {
   border: 0;
   box-shadow: 0 0 0;
+}
+
+.reveal code {
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
 }
